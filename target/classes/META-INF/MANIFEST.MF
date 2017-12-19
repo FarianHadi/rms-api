@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Implementation-Title: Resource Management Solution
+Implementation-Title: RMS-API
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: Farian_S
-Implementation-Vendor-Id: RMS
+Implementation-Vendor-Id: com.farian.rms
 Build-Jdk: 1.8.0_60
-Implementation-URL: http://projects.spring.io/spring-boot/RMS-API/
+Implementation-URL: http://projects.spring.io/spring-boot/RMS-API2/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 

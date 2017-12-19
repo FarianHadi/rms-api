@@ -5,9 +5,11 @@ import org.springframework.context.annotation.Configuration;
 
 import com.rms.utils.RMSConstanst;
 
+
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
+import springfox.documentation.service.Tag;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -18,8 +20,12 @@ public class SwaggerConfig {
 	@Bean
 	public Docket rmsApi() {
 		return new Docket(DocumentationType.SWAGGER_2)
+				
+				.tags(new Tag("Employee API", "Provide all endpoint for employee data management"))
+				.tags(new Tag("Grade History API", "Provide all endpoint for history of employee's grade  data management"))
 				.select()
 				.apis(RequestHandlerSelectors.basePackage("com.rms.employee"))
+				
 				//.paths(()-> "/employee")
 				//.paths("/employee.*")
 				.build();

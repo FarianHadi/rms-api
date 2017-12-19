@@ -10,7 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+
 @RestController
+@Api(tags = "Employee API")
 public class EmployeeController {
 	
 	@Autowired
@@ -32,7 +37,9 @@ public class EmployeeController {
 		service.updateEmployee(employee);
 	}
 	
-	
+	@ApiImplicitParams({
+        @ApiImplicitParam(name = "id", value = "The employee ID", required = true,  defaultValue="Niklas")
+      })
 	@RequestMapping(method=RequestMethod.DELETE, value="/employee/{id}")
 	public void deleteEmployee(@PathVariable String id) {
 		service.deleteEmployee(id);
